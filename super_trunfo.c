@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h> // biblioteca para utilizar a funçao strtok
 
 
 
@@ -13,12 +14,15 @@ int main(){
 
     int  populacao1, populacao2; // recebe a população da cidade
 
-    int ponto_turistico1, ponto_turistico2; // recebe o numero de pontos turisticos da cidade
+    int  ponto_turistico1, ponto_turistico2; // recebe o numero de pontos turisticos da cidade
 
     float area1, area2; //recebe o total da area da cidade
 
     float pib1, pib2; // recebe o PIB da cidade.
 
+    printf("=== SUPER TRUNFO === ");
+    printf("\n");
+    printf("\n");
     
     // Adicionado observações para o usuario
 
@@ -31,6 +35,38 @@ int main(){
     printf("→ O codigo de cada carta é represnetado pela letra do estado escolhido e seguido por um numero de 01 a 04.\n");
 
     printf("  - Ex: A01 , B03 \n");
+
+    // ENTRADA DE DADOS CARTA 1
+
+
+    printf("\n");
+    printf("CADASTRO CARTA 1:\n");
+    printf("\n");
+
+    printf("Digite o estado: ");
+    scanf("%c" , &estado1); // recebe a letra referente ao estado
+    getchar();
+
+    printf("Digite o codigo da carta: ");
+    scanf(" %s" , codigo_carta1); // recebe o codigo da carta
+    getchar();
+
+    printf("Digite o nome da cidade: "); // recebe o nome da cidade
+    fgets(cidade1 , 50 , stdin);
+    strtok(cidade1 , "\n");
+
+    printf("Digite a população da cidade: "); // recebe a populacao da cidade
+    scanf("%d" , &populacao1);
+
+    printf("Digite a área da cidade: ");
+    scanf("%f", &area1); // recebe a area da cidade
+
+    printf("Digite o PIB da cidade: ");
+    scanf("%f" , &pib1); // recebe o PIB da cidade
+
+    printf("Digite o número de pontos turísticos: ");
+    scanf("%d" , &ponto_turistico1);// recebe o numero de pontos turísticos
+
 
 
 
