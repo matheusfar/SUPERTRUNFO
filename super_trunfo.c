@@ -5,7 +5,6 @@
 
 int main(){
 
-
     char estado1 , estado2; // recebe uma letra referente ao estado
 
     char codigo_carta1[50] , codigo_carta2[50]; // recebe o codigo da carta
@@ -44,28 +43,28 @@ int main(){
     printf("\n");
 
     printf("Digite o estado: ");
-    scanf("%c" , &estado1); // recebe a letra referente ao estado 
+    scanf("%c" , &estado1); 
     getchar(); // Limpeza de buffer
 
     printf("Digite o código da carta: ");
-    scanf(" %s" , codigo_carta1); // recebe o codigo da carta
+    scanf(" %s" , codigo_carta1); 
     getchar(); // Limpeza de buffer
 
-    printf("Digite o nome da cidade: "); // recebe o nome da cidade 
+    printf("Digite o nome da cidade: "); 
     fgets(cidade1 , 50 , stdin);
     strtok(cidade1 , "\n"); // para a retirada da quebra de linha
 
-    printf("Digite a população da cidade: "); // recebe a populacao da cidade 
+    printf("Digite a população da cidade: "); 
     scanf("%d" , &populacao1);
 
     printf("Digite a área da cidade: ");
-    scanf("%f", &area1); // recebe a area da cidade
+    scanf("%f", &area1); 
 
     printf("Digite o PIB da cidade: ");
-    scanf("%f" , &pib1); // recebe o PIB da cidade
+    scanf("%f" , &pib1); 
 
     printf("Digite o número de pontos turísticos: ");
-    scanf("%d" , &ponto_turistico1);// recebe o numero de pontos turísticos
+    scanf("%d" , &ponto_turistico1);
 
 
     // SAIDA DE DADOS CARTA 1
@@ -90,28 +89,28 @@ int main(){
     printf("\n");
 
     printf("Digite um estado: ");
-    scanf(" %c" , &estado2); // recebe a letra referente ao estado 
+    scanf(" %c" , &estado2); 
     getchar(); //Limpeza de buffer
 
     printf("Digite o código da carta: ");
-    scanf("%s" , codigo_carta2); //recebe o codigo da carta 
+    scanf("%s" , codigo_carta2); 
     getchar(); //Limpeza de buffer
 
     printf("Digite nome da cidade: ");
-    fgets(cidade2 , 50 , stdin); // recebe o nome da cidade 
+    fgets(cidade2 , 50 , stdin); 
     strtok(cidade2 , "\n"); // para a retirda da quebra de linha
     
     printf("Digite a população da cidade: ");
-    scanf("%d" , &populacao2); // recebe a populaçao da cidade
+    scanf("%d" , &populacao2); 
 
     printf("Digite a área da cidade: "); 
-    scanf("%f" , &area2); // recebe a area da cidade 
+    scanf("%f" , &area2); 
 
     printf("Digite o PIB da cidade: ");
-    scanf("%f" , &pib2); // recebe o PIB da cidade
+    scanf("%f" , &pib2); 
 
     printf("Digite o números de pontos turísticos: ");
-    scanf("%d" , &ponto_turistico2); // recebe o numero de pontos turisticos 
+    scanf("%d" , &ponto_turistico2); 
 
 
     //SAIDA DE DADOS CARTA 2
