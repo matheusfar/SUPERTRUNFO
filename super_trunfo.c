@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+
+
 int main(){
 
 
@@ -16,6 +18,19 @@ int main(){
     float area1, area2; //recebe o total da area da cidade
 
     float pib1, pib2; // recebe o PIB da cidade.
+
+    
+    // Adicionado observações para o usuario
+
+    printf("→ Cada um dos 8 estados estarão representados por uma letra de A a H.\n");
+
+    printf("→ A população pode ser informada por um número aredondado.\n");
+
+    printf("  - Ex: 300.000 sem '.' e ','.\n");
+
+    printf("→ O codigo de cada carta é represnetado pela letra do estado escolhido e seguido por um numero de 01 a 04.\n");
+
+    printf("  - Ex: A01 , B03 \n");
 
 
 
