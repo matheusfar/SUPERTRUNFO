@@ -36,8 +36,8 @@ int main(){
 
     printf("  - Ex: A01 , B03 \n");
 
-    // ENTRADA DE DADOS CARTA 1
 
+    // ENTRADA DE DADOS CARTA 1
 
     printf("\n");
     printf("CADASTRO CARTA 1:\n");
@@ -51,11 +51,11 @@ int main(){
     scanf(" %s" , codigo_carta1); // recebe o codigo da carta
     getchar();
 
-    printf("Digite o nome da cidade: "); // recebe o nome da cidade
+    printf("Digite o nome da cidade: "); // recebe o nome da cidade 
     fgets(cidade1 , 50 , stdin);
     strtok(cidade1 , "\n");
 
-    printf("Digite a população da cidade: "); // recebe a populacao da cidade
+    printf("Digite a população da cidade: "); // recebe a populacao da cidade 
     scanf("%d" , &populacao1);
 
     printf("Digite a área da cidade: ");
@@ -68,6 +68,22 @@ int main(){
     scanf("%d" , &ponto_turistico1);// recebe o numero de pontos turísticos
 
 
+    // SAIDA DE DADOS CARTA 1
+
+    printf("\n");
+    printf("CARTA 1: \n");
+    printf("\n");
+    printf("Estado: %c\n" , estado1);
+    printf("Código da carta: %s\n", codigo_carta1);
+    printf("Cidade: %s\n", cidade1);
+    printf("Populacão: %d\n", populacao1);
+    printf("Área: %.2f\n" , area1);
+    printf("PIB: %.2f\n", pib1);
+    printf("Número de Pontos Turísticos: %d\n" , ponto_turistico1);
+
+
+    
+    
 
 
     return 0;
