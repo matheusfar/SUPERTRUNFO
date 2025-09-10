@@ -28,7 +28,7 @@ int main(){
 
     printf("→ Cada um dos 8 estados estarão representados por uma letra de A a H.\n");
 
-    printf("→ A população pode ser informada por um número aredondado.\n");
+    printf("→ A população pode ser informada por um número arredondado.\n");
 
     printf("  - Ex: 300.000 sem '.' e ','.\n");
 
@@ -44,16 +44,16 @@ int main(){
     printf("\n");
 
     printf("Digite o estado: ");
-    scanf("%c" , &estado1); // recebe a letra referente ao estado 1
-    getchar();
+    scanf("%c" , &estado1); // recebe a letra referente ao estado 
+    getchar(); // Limpeza de buffer
 
     printf("Digite o código da carta: ");
     scanf(" %s" , codigo_carta1); // recebe o codigo da carta
-    getchar();
+    getchar(); // Limpeza de buffer
 
     printf("Digite o nome da cidade: "); // recebe o nome da cidade 
     fgets(cidade1 , 50 , stdin);
-    strtok(cidade1 , "\n");
+    strtok(cidade1 , "\n"); // para a retirada da quebra de linha
 
     printf("Digite a população da cidade: "); // recebe a populacao da cidade 
     scanf("%d" , &populacao1);
@@ -77,8 +77,8 @@ int main(){
     printf("Código da carta: %s\n", codigo_carta1);
     printf("Cidade: %s\n", cidade1);
     printf("Populacão: %d\n", populacao1);
-    printf("Área: %.2f\n" , area1);
-    printf("PIB: %.2f\n", pib1);
+    printf("Área: %.2f Km²\n" , area1);
+    printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Número de Pontos Turísticos: %d\n" , ponto_turistico1);
 
 
@@ -86,20 +86,20 @@ int main(){
     // ENTRADA DE DADOS DA CARTA 2
 
     printf("\n");
-    printf("CARTA 2: \n");
+    printf("CADASTRO CARTA 2: \n");
     printf("\n");
 
     printf("Digite um estado: ");
     scanf(" %c" , &estado2); // recebe a letra referente ao estado 
-    getchar();
+    getchar(); //Limpeza de buffer
 
     printf("Digite o código da carta: ");
     scanf("%s" , codigo_carta2); //recebe o codigo da carta 
-    getchar();
+    getchar(); //Limpeza de buffer
 
-    printf("Digite a população da cidade: ");
+    printf("Digite nome da cidade: ");
     fgets(cidade2 , 50 , stdin); // recebe o nome da cidade 
-    strtok(cidade2 , "\n");
+    strtok(cidade2 , "\n"); // para a retirda da quebra de linha
     
     printf("Digite a população da cidade: ");
     scanf("%d" , &populacao2); // recebe a populaçao da cidade
@@ -113,6 +113,19 @@ int main(){
     printf("Digite o números de pontos turísticos: ");
     scanf("%d" , &ponto_turistico2); // recebe o numero de pontos turisticos 
 
+
+    //SAIDA DE DADOS CARTA 2
+
+    printf("\n");
+    printf("CARTA 2:\n");
+    printf("\n");
+
+    printf("Estado: %c\n", estado2);
+    printf("Código da carta: %s\n", codigo_carta2);
+    printf("População: %d\n" , populacao2);
+    printf("Área: %.2f km²\n", area2);
+    printf("PIB: %.2f bilhões de reais\n" , pib2);
+    printf("Número de Pontos Turísticos: %d\n", ponto_turistico2);
 
 
     return 0;
