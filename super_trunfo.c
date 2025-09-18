@@ -19,6 +19,10 @@ int main(){
 
     float pib1, pib2; // recebe o PIB da cidade.
 
+    float densidade_populacional1 , densidade_populacional2;
+
+    float pib_per_capita1 , pib_per_capita2;
+
     printf("=== SUPER TRUNFO === ");
     printf("\n");
     printf("\n");
@@ -27,7 +31,7 @@ int main(){
 
     printf("→ Cada um dos 8 estados estarão representados por uma letra de A a H.\n");
 
-    printf("→ A população pode ser informada por um número arredondado.\n");
+    printf("→ A população pode ser informada por um número arredondado, sem virgulas ou pontos.\n");
 
     printf("  - Ex: 300.000 sem '.' e ','.\n");
 
@@ -46,7 +50,7 @@ int main(){
     scanf("%c" , &estado1); 
     getchar(); // Limpeza de buffer
 
-    printf("Digite o código da carta: ");
+    printf("Digite o código da carta (Ex:A01): ");
     scanf(" %s" , codigo_carta1); 
     getchar(); // Limpeza de buffer
 
@@ -60,11 +64,16 @@ int main(){
     printf("Digite a área da cidade: ");
     scanf("%f", &area1); 
 
-    printf("Digite o PIB da cidade: ");
+    printf("Digite o PIB da cidade (em bilhões de reais): ");
     scanf("%f" , &pib1); 
 
     printf("Digite o número de pontos turísticos: ");
     scanf("%d" , &ponto_turistico1);
+
+    
+    densidade_populacional1 = (float) populacao1 / area1; // CÁLCULO DA DENSIDADE POPULACIONAL
+    
+    pib_per_capita1 = (pib1 * 1000000000.0) / populacao1; // CÁLCULO DO PIB PER CAPITA
 
 
     // SAIDA DE DADOS CARTA 1
@@ -79,6 +88,9 @@ int main(){
     printf("Área: %.2f Km²\n" , area1);
     printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Número de Pontos Turísticos: %d\n" , ponto_turistico1);
+    printf("Densidade Populacional: %.2f hab/km²\n" ,densidade_populacional1);
+    printf("PIB per Capita: %.2f reais\n", pib_per_capita1);
+
 
 
     
@@ -92,13 +104,13 @@ int main(){
     scanf(" %c" , &estado2); 
     getchar(); //Limpeza de buffer
 
-    printf("Digite o código da carta: ");
+    printf("Digite o código da carta (Ex: A01): ");
     scanf("%s" , codigo_carta2); 
     getchar(); //Limpeza de buffer
 
     printf("Digite nome da cidade: ");
     fgets(cidade2 , 50 , stdin); 
-    strtok(cidade2 , "\n"); // para a retirda da quebra de linha
+    strtok(cidade2 , "\n"); // para a retirada da quebra de linha
     
     printf("Digite a população da cidade: ");
     scanf("%d" , &populacao2); 
@@ -106,12 +118,16 @@ int main(){
     printf("Digite a área da cidade: "); 
     scanf("%f" , &area2); 
 
-    printf("Digite o PIB da cidade: ");
+    printf("Digite o PIB da cidade (em bilhões de reais): ");
     scanf("%f" , &pib2); 
 
     printf("Digite o números de pontos turísticos: ");
     scanf("%d" , &ponto_turistico2); 
 
+    
+    densidade_populacional2 = (float) populacao2 / area2 ; // CÁLCULO DA DENSIDADE POPULACIONAL
+
+    pib_per_capita2 = (pib2 * 1000000000.0) / populacao2; // CÁLCULO DO PIB PER CAPITA
 
     //SAIDA DE DADOS CARTA 2
 
@@ -121,11 +137,17 @@ int main(){
 
     printf("Estado: %c\n", estado2);
     printf("Código da carta: %s\n", codigo_carta2);
+    printf("Cidade: %s\n", cidade2);
     printf("População: %d\n" , populacao2);
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n" , pib2);
     printf("Número de Pontos Turísticos: %d\n", ponto_turistico2);
+    printf("Densidade Populacional: %.2f hab/km²\n" ,densidade_populacional2);
+    printf("PIB per Capita: %.2f reais\n", pib_per_capita2);
 
+    printf("\n");
+
+ 
 
     return 0;
 }
