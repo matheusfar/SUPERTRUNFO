@@ -82,6 +82,8 @@ int main(){
     printf("Digite o número de pontos turísticos: ");
     scanf("%d" , &ponto_turistico1);
 
+    
+
     // (utilizar a função (float) converte explicitamente a variavel int (tipo inteiro) em float.
 
     densidade_populacional1 = (float) populacao1 / area1; // CÁLCULO DA DENSIDADE POPULACIONAL 
