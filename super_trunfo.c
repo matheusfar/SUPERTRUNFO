@@ -88,7 +88,7 @@ int main(){
     
     pib_per_capita1 = (pib1 * 1000000000.0) / populacao1; // CÁLCULO DO PIB PER CAPITA
 
-    densidade_reversa1 = area1 / (float) populacao1; // CÁLCULO DA DENSIDADE POPULACIONAL REVERSA
+    densidade_reversa1 = 1.0 / densidade_populacional1; // CÁLCULO DA DENSIDADE POPULACIONAL REVERSA
 
     super_poder1 = (float) populacao1 + area1 + pib1 + densidade_reversa1 + (float) ponto_turistico1 + pib_per_capita1; // SOMA TODOS OS VALORES NUMERICOS DA CARTA 1
 
@@ -145,12 +145,12 @@ int main(){
 
 
     // (utilizar a função (float) converte explicitamente a variavel int (tipo inteiro) em float.
-    
+
     densidade_populacional2 = (float) populacao2 / area2 ; // CÁLCULO DA DENSIDADE POPULACIONAL
 
     pib_per_capita2 = (pib2 * 1000000000.0) / populacao2; // CÁLCULO DO PIB PER CAPITA
 
-    densidade_reversa2 = area2 / (float) populacao2; // CÁLCULO DA DENSIDADE POPULACIONAL REVERSA.
+    densidade_reversa2 = 1.0 / densidade_populacional2; // CÁLCULO DA DENSIDADE POPULACIONAL REVERSA.
 
     super_poder2 = (float) populacao2 + area2 + pib2 + densidade_reversa2 + (float) ponto_turistico2  + pib_per_capita2; // SOMA TODOS OS VALORES NUMERICOS DA CARTA 2
 
