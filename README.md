@@ -1,71 +1,116 @@
-Desafio Super Trunfo - Países - Cadastro das Cartas
-Bem-vindo ao desafio "Super Trunfo - Países"! No jogo Super Trunfo, os jogadores comparam os atributos das cartas para determinar a mais forte. O tema deste Super Trunfo é "Países", onde você comparará os atributos das cidades.
+🃏 Super Trunfo em C
 
-A empresa MateCheck contratou você para desenvolver a parte inicial do jogo, que consiste no cadastro das cartas.
+Este projeto é uma versão simplificada do jogo Super Trunfo, implementada em C.
+O objetivo é comparar atributos de duas cartas de cidades de diferentes estados para decidir qual vence em determinada categoria.
 
-O desafio está dividido em três níveis: Novato, Aventureiro e Mestre, com cada nível adicionando mais complexidade ao anterior. Você deve escolher qual desafio quer realizar.
+📖 Objetivo
 
-🚨 Atenção: O nível Novato do desafio é focado apenas no cadastro das cartas, utilizando as funções scanf para ler os dados e printf para exibi-los.
+Neste primeiro nível, o objetivo é construir a base do jogo:
 
-🎮 Nível Novato: Cadastro Básico
-No nível Novato, você iniciará criando o sistema básico do jogo Super Trunfo com o tema "Países". As cartas serão divididas por estados, cada um com quatro cidades. Imagine um país dividido em oito estados (A a H), e cada estado com quatro cidades (1 a 4). A combinação forma o código da carta (ex: A01, B02).
+Permitir o cadastro das cartas de cidades.
 
-🚩 Objetivo: Criar um programa em C que cadastra duas cartas com os seguintes atributos:
+Armazenar as informações em variáveis apropriadas.
 
-População (int)
-Área (float)
-PIB (float)
-Número de pontos turísticos (int)
-⚙️ Funcionalidades do Sistema:
+Exibir os dados cadastrados de forma clara e organizada.
 
-O sistema permitirá ao usuário cadastrar os dados de duas cartas manualmente via terminal.
-Após o cadastro, o sistema exibirá os dados de cada cidade de forma organizada.
-📥 Entrada e 📤 Saída de Dados:
+🚀 Como compilar e executar
 
-O usuário insere os dados de cada carta interativamente via scanf.
-O programa exibe os dados cadastrados usando printf, com cada atributo em uma nova linha.
-Simplificações para o Nível Novato:
+Certifique-se de ter o compilador gcc instalado.
 
-Cadastre apenas duas cartas.
-Concentre-se na leitura, armazenamento e exibição. Não implemente comparações ou outros recursos.
-Não use laços (for, while) ou condicionais (if, else).
-🛡️ Nível Aventureiro: Cálculo de Atributos
-No nível Aventureiro, você expandirá o sistema para incluir o cálculo de dois novos atributos: Densidade Populacional e PIB per Capita.
+Clone este repositório ou baixe os arquivos.
 
-🆕 Diferença em relação ao Nível Novato:
+No terminal, execute:
 
-Novos Atributos:
-Densidade Populacional: População / Área (float)
-PIB per Capita: PIB / População (float)
-⚙️ Funcionalidades do Sistema:
+gcc super_trunfo.c -o super_trunfo
+./super_trunfo
 
-O sistema calculará automaticamente a Densidade Populacional e o PIB per Capita.
-Os novos atributos serão exibidos junto com os demais.
-📥 Entrada e 📤 Saída de Dados:
+📝 Como jogar
 
-Mesma entrada do nível Novato.
-A saída exibirá também os atributos calculados.
-Simplificações para o Nível Intermediário:
+O usuário deverá cadastrar duas cartas com os seguintes atributos:
 
-Continue cadastrando apenas duas cartas.
-Continue sem usar laços (for, while) ou condicionais (if, else).
-🏆 Nível Mestre: Comparação e Super Poder
-No nível Mestre, você implementará a comparação entre duas cartas e o cálculo do "Super Poder".
+Estado: Uma letra de A a H (representando um dos oito estados). char
 
-🆕 Diferença em relação ao Nível Aventureiro:
+Código da Carta: A letra do estado seguida de um número de 01 a 04 (ex: A01, B03). char[]
 
-Comparação de Cartas: O usuário poderá comparar as duas cartas.
-Super Poder: Soma de todos os atributos (inclusive os calculados), com a densidade populacional invertida antes da soma (1/densidade). Tipo: float.
-⚙️ Funcionalidades do Sistema:
+Nome da Cidade: Nome da cidade. char[]
 
-Comparação atributo a atributo, mostrando qual carta venceu (1 se a Carta 1 vence, 0 se a Carta 2 vence).
-Para Densidade Populacional, vence a carta com o menor valor.
-Para os demais atributos (e o Super Poder), vence a carta com o maior valor.
-📥 Entrada e 📤 Saída de Dados:
+População: Número de habitantes. int
 
-Mesma entrada dos níveis anteriores, mas a População agora é unsigned long int.
-A saída mostrará o resultado da comparação para cada atributo e o Super Poder.
-Observação: Preste atenção à conversão de tipos ao calcular o Super Poder!
+Área (km²): Área da cidade. float
 
-🏁 Conclusão
-Ao concluir qualquer um dos níveis, você terá dado um passo importante no desenvolvimento do Super Trunfo - Países. Boa sorte e divirta-se programando!
+PIB: Produto Interno Bruto da cidade. float
+
+Número de Pontos Turísticos: Quantidade de pontos turísticos. int
+
+Após o cadastro, o programa exibirá as informações de cada carta formatadas.
+
+📌 Exemplo de saída:
+
+Carta 1:
+Estado: A
+Código: A01
+Nome da Cidade: São Paulo
+População: 12325000
+Área: 1521.11 km²
+PIB: 699.28 bilhões de reais
+Pontos turísticos: 50
+
+🏆 Regras de comparação
+
+Na próxima fase do desafio, será possível comparar as cartas:
+
+População, Área, PIB, Pontos Turísticos, PIB per capita, Super Poder
+→ vence o maior valor.
+
+Densidade demográfica
+→ vence o menor valor.
+
+Valores iguais resultam em empate.
+
+🛠️ Tecnologias usadas
+
+Linguagem C
+
+Compilador GCC
+
+✅ Requisitos funcionais
+
+Estruturas de controle: if-else, switch-case
+
+Entrada e saída padrão (scanf / printf)
+
+Cadastro de duas cartas
+
+Exibição organizada dos dados cadastrados
+
+⚙️ Requisitos não funcionais
+
+Usabilidade: fácil de usar, com instruções claras.
+
+Legibilidade: código indentado e comentado.
+
+Corretude: funcionamento sem erros de compilação ou execução.
+
+🎯 Simplificações do desafio
+
+Apenas duas cartas devem ser cadastradas.
+
+Não é necessário implementar repetição (for, while) ou estruturas de decisão complexas neste nível.
+
+O código deve ser uma sequência simples de instruções.
+
+📌 Entrega do projeto
+
+Crie um repositório público no GitHub.
+
+Adicione o arquivo super_trunfo.c.
+
+Compile e teste localmente.
+
+Faça commit e push para o repositório.
+
+Envie o link do repositório pela plataforma SAVA.
+
+✍️ Autor
+
+Projeto desenvolvido como exercício acadêmico para prática de programação em C.
