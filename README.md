@@ -1,116 +1,69 @@
-🃏 Super Trunfo em C
+🃏 Super Trunfo – Nível Mestre
 
-Este projeto é uma versão simplificada do jogo Super Trunfo, implementada em C.
-O objetivo é comparar atributos de duas cartas de cidades de diferentes estados para decidir qual vence em determinada categoria.
+Implementando Comparações Avançadas com Atributos Múltiplos em C
 
-📖 Objetivo
+📘 Descrição do Desafio
 
-Neste primeiro nível, o objetivo é construir a base do jogo:
+Este é o desafio final do projeto Super Trunfo, onde aplicamos todos os conceitos aprendidos sobre estruturas de decisão, operadores e lógica condicional em C.
+O objetivo é criar um sistema inteligente capaz de comparar duas cartas de países, permitindo ao jogador escolher dois atributos diferentes para determinar o vencedor da rodada.
 
-Permitir o cadastro das cartas de cidades.
+O jogo utiliza menus dinâmicos, operadores ternários e lógica de soma de atributos para tornar a comparação mais realista e desafiadora.
 
-Armazenar as informações em variáveis apropriadas.
+🎯 Objetivo
 
-Exibir os dados cadastrados de forma clara e organizada.
+Desenvolver um programa em C que:
 
-🚀 Como compilar e executar
+Compare duas cartas com base em dois atributos numéricos escolhidos pelo jogador;
 
-Certifique-se de ter o compilador gcc instalado.
+Utilize menus dinâmicos e estruturas de decisão (switch);
 
-Clone este repositório ou baixe os arquivos.
+Exiba os resultados de forma clara e organizada.
 
-No terminal, execute:
+⚙️ Requisitos Funcionais
+1️⃣ Escolha de Dois Atributos
 
-gcc super_trunfo.c -o super_trunfo
-./super_trunfo
+O jogador deve escolher dois atributos diferentes entre os disponíveis (ex: PIB, área, população, densidade demográfica etc.).
 
-📝 Como jogar
+O sistema deve impedir que o mesmo atributo seja escolhido duas vezes.
 
-O usuário deverá cadastrar duas cartas com os seguintes atributos:
+2️⃣ Comparação com Múltiplos Atributos
 
-Estado: Uma letra de A a H (representando um dos oito estados). char
+Cada atributo é comparado individualmente.
 
-Código da Carta: A letra do estado seguida de um número de 01 a 04 (ex: A01, B03). char[]
+Regra geral: vence quem tiver o maior valor.
 
-Nome da Cidade: Nome da cidade. char[]
+Exceção: na Densidade Demográfica, vence quem tiver o menor valor.
 
-População: Número de habitantes. int
+3️⃣ Soma dos Atributos
 
-Área (km²): Área da cidade. float
+Após comparar os dois atributos, o sistema soma os valores correspondentes de cada carta.
 
-PIB: Produto Interno Bruto da cidade. float
+A carta com a maior soma total é declarada vencedora.
 
-Número de Pontos Turísticos: Quantidade de pontos turísticos. int
+4️⃣ Tratamento de Empates
 
-Após o cadastro, o programa exibirá as informações de cada carta formatadas.
+Se a soma dos dois atributos for igual, o sistema exibe:
 
-📌 Exemplo de saída:
+Empate!
 
-Carta 1:
-Estado: A
-Código: A01
-Nome da Cidade: São Paulo
-População: 12325000
-Área: 1521.11 km²
-PIB: 699.28 bilhões de reais
-Pontos turísticos: 50
+5️⃣ Menus Dinâmicos
 
-🏆 Regras de comparação
+O menu de seleção dos atributos é dinâmico, ou seja:
 
-Na próxima fase do desafio, será possível comparar as cartas:
+Após escolher o primeiro atributo, ele não aparece mais como opção para o segundo.
 
-População, Área, PIB, Pontos Turísticos, PIB per capita, Super Poder
-→ vence o maior valor.
+Implementado usando switch-case para tornar o código organizado e modular.
 
-Densidade demográfica
-→ vence o menor valor.
+6️⃣ Exibição Clara do Resultado
 
-Valores iguais resultam em empate.
+O programa deve exibir de forma estruturada:
 
-🛠️ Tecnologias usadas
+O nome dos dois países;
 
-Linguagem C
+Os dois atributos utilizados na comparação;
 
-Compilador GCC
+Os valores de cada atributo em cada carta;
 
-✅ Requisitos funcionais
+A soma total dos atributos;
 
-Estruturas de controle: if-else, switch-case
-
-Entrada e saída padrão (scanf / printf)
-
-Cadastro de duas cartas
-
-Exibição organizada dos dados cadastrados
-
-⚙️ Requisitos não funcionais
-
-Usabilidade: fácil de usar, com instruções claras.
-
-Legibilidade: código indentado e comentado.
-
-Corretude: funcionamento sem erros de compilação ou execução.
-
-🎯 Simplificações do desafio
-
-Apenas duas cartas devem ser cadastradas.
-
-Não é necessário implementar repetição (for, while) ou estruturas de decisão complexas neste nível.
-
-O código deve ser uma sequência simples de instruções.
-
-📌 Entrega do projeto
-
-Crie um repositório público no GitHub.
-
-Adicione o arquivo super_trunfo.c.
-
-Compile e teste localmente.
-
-Faça commit e push para o repositório.
-
-Envie o link do repositório pela plataforma SAVA.
-
-✍️ Autor
-
-Projeto desenvolvido como exercício acadêmico para prática de programação em C.
+E o resultado final da rodada (quem venceu ou se houve empate).
