@@ -418,9 +418,7 @@ int main(){
 
         }
 
-       
-    
-   
+
     
 
     printf("\n");
