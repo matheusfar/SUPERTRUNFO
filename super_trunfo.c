@@ -199,7 +199,6 @@ int main(){
     printf("\n");
 
 
-
     //COMPARAÇÃO ENTRE ATRIBUTOS DAS CARTAS
 
     printf("\n");
@@ -227,8 +226,6 @@ int main(){
     printf("5. Densidade demográfica\n");
     printf("6. Pib per Capita\n");
     printf("7. Super poder\n");
-    
-    //ADICIONAR OUTROS ATRIBUTOS NO MENU DE ESCOLHA
 
     //Escolha do atributo 1 
     printf("\n");
@@ -264,7 +261,6 @@ int main(){
         printf("    Carta 1 PIB : %.2f\n", pib1);
         printf("    Carta 2 PIB : %.2f\n", pib2);
 
-    
 
         resultado1 = pib1 > pib2 ? 1 :((pib2 > pib1) ? 2: 0);
         break;
@@ -404,8 +400,6 @@ int main(){
         printf("        Cidade 1 : %s\n", cidade1);
         printf("        Cidade 2 : %s\n", cidade2);
 
-        //COLOCAR A SOMA DE TODOS OS ATRIBUTOS AQUI
-
         //SAIDA DO RESULTADO 
         
         if (resultado1 == 1 && resultado2 == 1){
@@ -417,9 +411,6 @@ int main(){
         }
 
         }
-
-
-    
 
     printf("\n");
 
